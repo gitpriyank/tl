@@ -1,0 +1,43 @@
+|instantly|
+===========
+
+|PyPI version| |PyPi downloads| |License| |Bitdeli Badge|
+
+instantly is a simple tool that makes it incredibly quick and easy to
+create, manage, and share project templates and setup projects. It
+provides a command line tool, Python API, and web-interface so you can
+expand templates exactly where you need to. It currently cleanly
+supports Python 2.6 - 3.4 using pies
+(https://github.com/timothycrosley/pies) to achieve this without ugly
+hacks and/or py2to3.
+
+::
+
+    instantly create_my_next_big_thing
+
+Installing instantly
+====================
+
+Installing instantly is as simple as:
+
+::
+
+    pip install instantly
+
+or if you prefer
+
+::
+
+    easy_install instantly
+
+.. |instantly| image:: https://raw.github.com/timothycrosley/instantly/develop/logo.png
+.. |PyPI version| image:: https://badge.fury.io/py/instantly.png
+   :target: http://badge.fury.io/py/instantly
+.. |PyPi downloads| image:: https://pypip.in/d/instantly/badge.png
+   :target: https://crate.io/packages/instantly/
+.. |License| image:: https://pypip.in/license/instantly/badge.png
+   :target: https://pypi.python.org/pypi/instantly/
+.. |Bitdeli Badge| image:: https://d2weczhvl823v0.cloudfront.net/timothycrosley/instantly/trend.png
+   :target: https://bitdeli.com/free
+
+

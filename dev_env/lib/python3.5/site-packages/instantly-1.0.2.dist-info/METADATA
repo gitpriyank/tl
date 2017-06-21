@@ -1,0 +1,77 @@
+Metadata-Version: 2.0
+Name: instantly
+Version: 1.0.2
+Summary: A tool which allows you to create templates that can be expanded into full projects or stubs instantly.
+Home-page: http://www.instantly.pl/
+Author: Timothy Crosley
+Author-email: timothy.crosley@gmail.com
+License: MIT
+Download-URL: https://github.com/timothycrosley/instantly/archive/1.0.2.tar.gz
+Keywords: Accelerate,Python,Python2,Python3,Templating,Automate,Template,Snippet
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Requires: configobj
+Requires: requests
+Requires: pies
+Requires-Dist: configobj
+Requires-Dist: requests
+Requires-Dist: pies (>=2.6.1)
+
+|instantly|
+===========
+
+|PyPI version| |PyPi downloads| |License| |Bitdeli Badge|
+
+instantly is a simple tool that makes it incredibly quick and easy to
+create, manage, and share project templates and setup projects. It
+provides a command line tool, Python API, and web-interface so you can
+expand templates exactly where you need to. It currently cleanly
+supports Python 2.6 - 3.4 using pies
+(https://github.com/timothycrosley/pies) to achieve this without ugly
+hacks and/or py2to3.
+
+::
+
+    instantly create_my_next_big_thing
+
+Installing instantly
+====================
+
+Installing instantly is as simple as:
+
+::
+
+    pip install instantly
+
+or if you prefer
+
+::
+
+    easy_install instantly
+
+.. |instantly| image:: https://raw.github.com/timothycrosley/instantly/develop/logo.png
+.. |PyPI version| image:: https://badge.fury.io/py/instantly.png
+   :target: http://badge.fury.io/py/instantly
+.. |PyPi downloads| image:: https://pypip.in/d/instantly/badge.png
+   :target: https://crate.io/packages/instantly/
+.. |License| image:: https://pypip.in/license/instantly/badge.png
+   :target: https://pypi.python.org/pypi/instantly/
+.. |Bitdeli Badge| image:: https://d2weczhvl823v0.cloudfront.net/timothycrosley/instantly/trend.png
+   :target: https://bitdeli.com/free
+
+

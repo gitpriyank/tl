@@ -11,10 +11,11 @@
 
 from __future__ import print_function
 import sys
-sys.path.append("/home/vppriyank/hackathon/dev_env/lib/python3.5/site-packages/")
+#sys.path.append("/home/vppriyank/hackathon/dev_env/lib/python3.5/site-packages/")
 import modbus_tk
 import modbus_tk.defines as cst
 from modbus_tk import modbus_tcp, hooks
+import time
 
 
 def main():
@@ -23,7 +24,7 @@ def main():
 
     def on_after_recv(data):
         master, bytes_data = data
-        print(bytes_data)
+        #print(bytes_data)
 
     hooks.install_hook('modbus.Master.after_recv', on_after_recv)
 
@@ -46,7 +47,9 @@ def main():
         master.set_timeout(5.0)
         logger.info("connected")
 
-        #logger.info(master.execute(1, cst.READ_HOLDING_REGISTERS, 0, 3))
+        for i in range(200):
+            logger.info(master.execute(1, cst.READ_HOLDING_REGISTERS, i*3, 3))
+            time.sleep(0.5)
 
         # Read and write floats
         # master.execute(1, cst.WRITE_MULTIPLE_REGISTERS, starting_address=0, output_value=[3.14], data_format='>f')
@@ -55,11 +58,11 @@ def main():
         # send some queries
         # logger.info(master.execute(1, cst.READ_COILS, 7, 10))
         # logger.info(master.execute(2, cst.READ_DISCRETE_INPUTS, 0, 8))
-        logger.info(master.execute(4, cst.READ_INPUT_REGISTERS, 10000, 10))
+        #logger.info(master.execute(4, cst.READ_INPUT_REGISTERS, 10000, 10))
         # logger.info(master.execute(1, cst.READ_HOLDING_REGISTERS, 0, 10))
         # logger.info(master.execute(3, cst.WRITE_SINGLE_COIL, 7, output_value=1))
-        # logger.info(master.execute(4, cst.WRITE_SINGLE_REGISTER, 100, output_value=54))
-        # logger.info(master.execute(1, cst.WRITE_MULTIPLE_COILS, 0, output_value=[1, 1, 0, 1, 1, 0, 1, 1]))
+        #logger.info(master.execute(4, cst.WRITE_SINGLE_REGISTER, 0, output_value=50))
+        #logger.info(master.execute(1, cst.WRITE_MULTIPLE_COILS, 0, output_value=[1, 1, 0, 1, 1, 0, 1, 1]))
         # logger.info(master.execute(1, cst.WRITE_MULTIPLE_REGISTERS, 100, output_value=xrange(12)))
 
     except modbus_tk.modbus.ModbusError as exc:
